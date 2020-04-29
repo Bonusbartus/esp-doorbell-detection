@@ -1,0 +1,48 @@
+esphome:
+  name: esphome_doorbell
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pw
+  domain: ".local"
+  reboot_timeout: 5min
+  power_save_mode: NONE
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret "api_pw"
+  reboot_timeout: 5min
+
+ota:
+  password: !secret "api_pw"
+
+status_led:
+  pin:
+    number: GPIO2
+    inverted: True
+
+binary_sensor:
+  - platform: gpio
+    pin: D7
+    name: "Doorbell"
+    filters:
+      - delayed_on: 20ms
+      - delayed_off: 40ms
+    on_press:
+      then:
+        - homeassistant.service:
+            service: notify.all_apps
+            data:
+              title: !secret doorbell_title
+              message: !secret doorbell_data
+
+mqtt:
+  broker: "192.168.1.119"
+  username: !secret mqtt_user
+  password: !secret mqtt_pw
+  discovery: False
