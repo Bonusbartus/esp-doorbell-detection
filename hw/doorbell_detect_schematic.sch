@@ -1,0 +1,287 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5EA89FF3
+P 1900 2850
+F 0 "J1" H 1818 2525 50  0000 C CNN
+F 1 "Conn_01x02" H 1818 2616 50  0000 C CNN
+F 2 "" H 1900 2850 50  0001 C CNN
+F 3 "~" H 1900 2850 50  0001 C CNN
+	1    1900 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky_Small D1
+U 1 1 5EA8AAEC
+P 5200 2700
+F 0 "D1" H 5200 2493 50  0000 C CNN
+F 1 "BAT48" H 5200 2584 50  0000 C CNN
+F 2 "" V 5200 2700 50  0001 C CNN
+F 3 "~" V 5200 2700 50  0001 C CNN
+	1    5200 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5EA8B389
+P 2500 2650
+F 0 "R3" V 2304 2650 50  0000 C CNN
+F 1 "220" V 2395 2650 50  0000 C CNN
+F 2 "" H 2500 2650 50  0001 C CNN
+F 3 "~" H 2500 2650 50  0001 C CNN
+	1    2500 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Isolator:4N35 U1
+U 1 1 5EA8C0E8
+P 3250 2750
+F 0 "U1" H 3250 3075 50  0000 C CNN
+F 1 "4N35" H 3250 2984 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 3050 2550 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/81181/4n35.pdf" H 3250 2750 50  0001 L CNN
+	1    3250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5EA8D7CD
+P 3750 3250
+F 0 "#PWR02" H 3750 3000 50  0001 C CNN
+F 1 "GND" H 3755 3077 50  0000 C CNN
+F 2 "" H 3750 3250 50  0001 C CNN
+F 3 "" H 3750 3250 50  0001 C CNN
+	1    3750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5EA8DC3D
+P 4350 2200
+F 0 "#PWR01" H 4350 2050 50  0001 C CNN
+F 1 "+3.3V" H 4365 2373 50  0000 C CNN
+F 2 "" H 4350 2200 50  0001 C CNN
+F 3 "" H 4350 2200 50  0001 C CNN
+	1    4350 2200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3550 2650
+Wire Wire Line
+	3550 2850 3750 2850
+Wire Wire Line
+	3750 2850 3750 3250
+Wire Wire Line
+	3550 2750 3750 2750
+Wire Wire Line
+	3750 2750 3750 2550
+$Comp
+L Device:R_Small R1
+U 1 1 5EA8F2A5
+P 3750 2450
+F 0 "R1" H 3809 2496 50  0000 L CNN
+F 1 "1k5" H 3809 2405 50  0000 L CNN
+F 2 "" H 3750 2450 50  0001 C CNN
+F 3 "~" H 3750 2450 50  0001 C CNN
+	1    3750 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5EA8F9DC
+P 4150 2750
+F 0 "R4" V 3954 2750 50  0000 C CNN
+F 1 "20k" V 4045 2750 50  0000 C CNN
+F 2 "" H 4150 2750 50  0001 C CNN
+F 3 "~" H 4150 2750 50  0001 C CNN
+	1    4150 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5EA8FE2C
+P 4700 2450
+F 0 "R2" H 4759 2496 50  0000 L CNN
+F 1 "4k7" H 4759 2405 50  0000 L CNN
+F 2 "" H 4700 2450 50  0001 C CNN
+F 3 "~" H 4700 2450 50  0001 C CNN
+	1    4700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5EA90472
+P 5650 2900
+F 0 "R5" H 5709 2946 50  0000 L CNN
+F 1 "150k" H 5709 2855 50  0000 L CNN
+F 2 "" H 5650 2900 50  0001 C CNN
+F 3 "~" H 5650 2900 50  0001 C CNN
+	1    5650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_Small D2
+U 1 1 5EA90BBE
+P 2500 2850
+F 0 "D2" H 2400 2800 50  0000 C CNN
+F 1 "BZX79" H 2500 2950 50  0000 C CNN
+F 2 "" V 2500 2850 50  0001 C CNN
+F 3 "~" V 2500 2850 50  0001 C CNN
+	1    2500 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 5EA92A60
+P 4600 2950
+F 0 "Q1" H 4791 2996 50  0000 L CNN
+F 1 "BC547" H 4791 2905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4800 2875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4600 2950 50  0001 L CNN
+	1    4600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5EA94715
+P 6150 2900
+F 0 "C1" H 6242 2946 50  0000 L CNN
+F 1 "470n" H 6242 2855 50  0000 L CNN
+F 2 "" H 6150 2900 50  0001 C CNN
+F 3 "~" H 6150 2900 50  0001 C CNN
+	1    6150 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3000 5650 3150
+Wire Wire Line
+	5650 3150 5900 3150
+Wire Wire Line
+	6150 3150 6150 3000
+Wire Wire Line
+	5900 3150 5900 3250
+Connection ~ 5900 3150
+Wire Wire Line
+	5900 3150 6150 3150
+Wire Wire Line
+	5650 2800 5650 2700
+Wire Wire Line
+	5650 2700 5300 2700
+Wire Wire Line
+	5650 2700 6150 2700
+Wire Wire Line
+	6150 2700 6150 2800
+Connection ~ 5650 2700
+Wire Wire Line
+	6150 2700 6650 2700
+Connection ~ 6150 2700
+Wire Wire Line
+	4700 2550 4700 2700
+Wire Wire Line
+	4700 2700 5100 2700
+Connection ~ 4700 2700
+Wire Wire Line
+	4700 2700 4700 2750
+Wire Wire Line
+	4700 2350 4700 2250
+Wire Wire Line
+	3750 2250 3750 2350
+Wire Wire Line
+	3750 2250 4350 2250
+Wire Wire Line
+	4350 2200 4350 2250
+Connection ~ 4350 2250
+Wire Wire Line
+	4350 2250 4700 2250
+Wire Wire Line
+	3750 2750 4050 2750
+Connection ~ 3750 2750
+Wire Wire Line
+	4250 2750 4300 2750
+Wire Wire Line
+	4300 2750 4300 2950
+Wire Wire Line
+	4300 2950 4400 2950
+Wire Wire Line
+	4700 3150 4700 3250
+$Comp
+L power:GND #PWR03
+U 1 1 5EA995FC
+P 4700 3250
+F 0 "#PWR03" H 4700 3000 50  0001 C CNN
+F 1 "GND" H 4705 3077 50  0000 C CNN
+F 2 "" H 4700 3250 50  0001 C CNN
+F 3 "" H 4700 3250 50  0001 C CNN
+	1    4700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EA99D57
+P 5900 3250
+F 0 "#PWR04" H 5900 3000 50  0001 C CNN
+F 1 "GND" H 5905 3077 50  0000 C CNN
+F 2 "" H 5900 3250 50  0001 C CNN
+F 3 "" H 5900 3250 50  0001 C CNN
+	1    5900 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2850 2600 2850
+Wire Wire Line
+	2400 2650 2200 2650
+Wire Wire Line
+	2200 2650 2200 2750
+Wire Wire Line
+	2200 2750 2100 2750
+Wire Wire Line
+	2100 2850 2400 2850
+Wire Wire Line
+	2600 2650 2950 2650
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5EAA341A
+P 6850 2700
+F 0 "J2" H 6930 2742 50  0000 L CNN
+F 1 "Conn_01x03" H 6930 2651 50  0000 L CNN
+F 2 "" H 6850 2700 50  0001 C CNN
+F 3 "~" H 6850 2700 50  0001 C CNN
+	1    6850 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2600 6500 2600
+Wire Wire Line
+	6650 2800 6500 2800
+Wire Wire Line
+	6500 2800 6500 3150
+Wire Wire Line
+	6500 3150 6150 3150
+Connection ~ 6150 3150
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5EAA5CC0
+P 6500 2200
+F 0 "#PWR05" H 6500 2050 50  0001 C CNN
+F 1 "+3.3V" H 6515 2373 50  0000 C CNN
+F 2 "" H 6500 2200 50  0001 C CNN
+F 3 "" H 6500 2200 50  0001 C CNN
+	1    6500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2200 6500 2600
+$EndSCHEMATC
