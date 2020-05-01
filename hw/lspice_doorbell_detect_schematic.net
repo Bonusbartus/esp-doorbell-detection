@@ -1,0 +1,27 @@
+* C:\workspace\Projects\HW_SW_development\Doorbell\esp-doorbell-detection\hw\lspice_doorbell_detect_schematic.asc
+XU1 N003 N006 N004 0 NC_01 4N25
+V1 N001 0 3.3 Rser=0
+R1 N003 power 220
+V2 power N008 SINE(0 13 50) Rser=1m
+S1 N008 N007 N010 N009 Switch1
+R2 power N007 60
+V3 N010 N009 PULSE(0 5 1 1u 1u 250m)
+R3 N001 N004 1.5k
+Q1 N002 N005 0 0 BC547C
+R4 N005 N004 22k
+R5 N001 N002 4k7
+D1 N002 GPIO BAT54AHM
+C1 GPIO 0 470n
+R7 GPIO 0 150k
+D2 N007 N006 1N750
+R6 N008 0 1G
+.model D D
+.lib C:\Views\mydocs\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Views\mydocs\LTspiceXVII\lib\cmp\standard.bjt
+.tran 2
+.model Switch1 SW(Ron=1 Roff=100Meg Vt=.5 Vh=-.4)
+.lib 4N25.sub
+.backanno
+.end
