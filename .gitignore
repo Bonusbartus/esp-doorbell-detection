@@ -1,6 +1,8 @@
 *.bck
 secrets.yaml
 *.bak
+*autosave*
+*.raw
 # Prerequisites
 *.d
 
