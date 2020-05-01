@@ -3,6 +3,7 @@ secrets.yaml
 *.bak
 *autosave*
 *.raw
+#.log
 # Prerequisites
 *.d
 
